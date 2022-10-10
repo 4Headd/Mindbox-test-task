@@ -20,7 +20,7 @@ namespace MindBoxTestCase.Models
                 throw new ArgumentException("invalid side length value: no side can be less than / equal to 0");
             }
 
-            if (((a + b) - c <= delta) || ((a + c) - b <= delta) || ((b + c) - a <= delta))
+            if (((a + b) <= c) || ((a + c) <= b) || ((b + c) <= a))
             {
                 throw new ArgumentException("invalid side length value");
             }
